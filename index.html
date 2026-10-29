@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Filip Pielecki · Software Developer</title>
+<meta name="description" content="Filip Pielecki, software developer based in London. Explore my projects, technology stack, and experience with React, TypeScript, and Python.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>">
+
+<script>
+/* ==========================================================================
+   EDIT ME — everything on the page comes from this object.
+   ========================================================================== */
+const DATA = {
+  name: 'Filip Pielecki',
+  role: 'Software Developer',
+  location: 'London, UK',
+  status: 'open to new challenges',
+  about: [
+  "I like building fast, friendly products: slick front-ends, solid APIs, and the boring-but-critical plumbing in between.",
+  "At Quantspark, I work across React and TypeScript front ends, Python and Flask back ends, and infrastructure including MySQL, Redis, MinIO, and Docker. I've also built internal tools and managed production deployments.",
+  ],
+  facts: [
+    ['Based in', 'London, UK'],
+    ['Currently', 'Software Developer at Quantspark'],
+    ['Experience', '1+ Year'],
+  ],
+  projects: [
+    {
+      name: 'Games of Hunger',
+      color: '#a5b86b',
+      stack: ['TypeScript', 'React', 'Vite', 'Zod', 'IndexedDB'],
+      blurb:
+        'Customisable browser-based survival story simulator. Create a cast with traits and relationships, then follow seeded games across a multi-biome arena. Authored events, rivalries, cursed items, and saved seasons build an ongoing group history, with browser-local saves and replay exports.',
+      repo: 'https://github.com/FP2003/games-of-hunger',
+    },
+    {
+      name: 'CreditPulse',
+      color: '#3b97e6',
+      year: '2025',
+      stack: ['Python', 'Next.js', 'React', 'Firebase'],
+      blurb:
+        'Full-stack credit scoring app combining a Python model with interactive score visualisations, score history, and personalised improvement tips. Firebase handles authentication and data storage.',
+      // Add year, link, and repo when confirmed.
+    },
+    {
+      name: 'Government Petition Platform',
+      color: '#ffd93b',
+      year: '2024',
+      stack: ['Firebase', 'Zod', 'Google OAuth 2.0', 'AJAX'],
+      blurb:
+        'Full-stack petition platform with user and admin panels for creating petitions, tracking signatures, and visualising statistics. Includes Google sign-in, CAPTCHA, QR scanning, and automated response handling.',
+      // Add year, link, and repo when confirmed.
+    },
+    {
+    name: 'Airbnb Price Prediction',
+    color: '#ff5a5f',
+    stack: ['Python', 'pandas', 'scikit-learn', 'XGBoost', 'TensorFlow'],
+    year: '2024',
+    blurb:
+      'Achieved 94% accuracy predicting nightly prices for London Airbnb listings. Built a machine learning pipeline spanning data exploration, outlier handling, and comparison of Random Forest, XGBoost, and neural network models, with cross-validation and regression metrics to evaluate performance.',
+    repo: 'https://github.com/FP2003/AirBnB-Price-Prediction-System',
+    report: 'https://docs.google.com/document/d/1u2R9qMw9nc96CbtuJXxNUoYJcBwDn97hE5AROFajYg4/edit?usp=sharing',
+  },
+      {
+      name: 'Galvanism',
+      color: '#a78bfa',
+      stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+      blurb:
+        'Cyberpunk campaign-management app for the Galvanism tabletop RPG, built around a themed command interface and custom design system. With a roadmap for DM and player dashboards covering rosters, missions, facilities, ballots, and self-serve player applications.',
+      repo: 'https://github.com/FP2003/galvanism-site',
+    },
+    {
+      name: 'Nodepls',
+      color: '#5db8a6',
+      year: '2026',
+      stack: ['React', 'TypeScript', 'D3', 'Motion'],
+      blurb:
+        'Reusable React package for exploring connected data through interactive force-directed graphs and a synced file explorer. Features relationship creation and deletion, configurable node and edge styling, smooth animations, and light and dark themes.',
+      repo: 'https://github.com/FP2003/nodepls',
+    },
+    {
+      name: 'Kabanos',
+      color: '#f59e0b',
+      year: '2026',
+      stack: ['Node.js', 'TypeScript', 'React', 'SQLite', 'PostgreSQL', 'MySQL'],
+      blurb:
+        'Developer tool that turns TODO and FIXME comments into a kanban board embedded in existing Node.js apps. Integrates with Express, Fastify, and Next.js, with live file watching, configurable workflows, and database-backed task state that tracks resolved work while preserving source files.',
+      repo: 'https://github.com/FP2003/kabanos',
+    },
+  ],
+  // Legacy scores are retained as data only; the catalogue does not display ratings.
+  stack: [
+    ['TypeScript', 8],
+    ['React', 8],
+    ['Python', 8],
+    ['Next.js', 7],
+    ['Flask', 7],
+    ['PostgreSQL', 7],
+    ['MySQL', 7],
+    ['Docker', 7],
+    ['AWS', 6],
+  ],
+  contactNote:
+    "Have a role or project in mind? Get in touch on LinkedIn or send me an email.",
+  links: [
+    {
+      label: 'GitHub',
+      url: 'https://github.com/FP2003',
+      icon: 'github',
+    },
+    {
+      label: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/filip-pielecki',
+      icon: 'linkedin',
+    },
+    {
+      label: 'Email',
+      url: 'mailto:filippieleckii@gmail.com',
+      icon: 'mail',
+    },
+  ],
+};
+</script>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&family=VT323&display=swap" rel="stylesheet">
+
+<style>
+:root { --sky-top: #3b97e6; --sky-bot: #a9dcff; --ink: #2a6cd6; --ink-dk: #17489a; --lemon: #ffd93b; --screen: #173a6a; --text: #eef6ff; --dim: #8fb4e0; --blue: #1f83f2; /* the D-pad / A / B button colour */
+  --notch: polygon(0 2px, 2px 2px, 2px 0, calc(100% - 2px) 0, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0 calc(100% - 2px)); /* 1-pixel rounded corner */ }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { overflow: hidden; font-family: Rubik, system-ui, sans-serif; color: #0f2547; background: linear-gradient(180deg, var(--sky-top), var(--sky-bot) 85%); -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--lemon); outline-offset: 3px; border-radius: 6px; }
+
+/* sky */
+#sky { position: fixed; inset: 0; overflow: hidden; pointer-events: none; }
+.cloud { position: absolute; left: 0; top: var(--y); width: var(--w); aspect-ratio: 2.4; opacity: var(--o, .95); filter: blur(var(--b, 12px));
+  background:
+    radial-gradient(closest-side, #fff 55%, #fff0) 6% 64% / 40% 66% no-repeat,
+    radial-gradient(closest-side, #fff 55%, #fff0) 36% 26% / 46% 96% no-repeat,
+    radial-gradient(closest-side, #fff 55%, #fff0) 66% 42% / 40% 80% no-repeat,
+    radial-gradient(closest-side, #fff 55%, #fff0) 96% 70% / 30% 56% no-repeat,
+    radial-gradient(closest-side, #fff 60%, #fff0) 50% 92% / 96% 46% no-repeat;
+  animation: drift var(--d, 120s) linear var(--dl, 0s) infinite; }
+@keyframes drift { from { transform: translateX(-110%); } to { transform: translateX(110vw); } }
+
+#gl { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 1; display: block; touch-action: none; }
+.no3d #gl { display: none; }
+
+/* left column: brand + nav */
+.side { position: fixed; inset: 0 auto 0 0; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding-left: clamp(24px, 7vw, 110px); pointer-events: none; transition: opacity .35s; }
+.side > * { pointer-events: auto; }
+body.zoom .side, body.zoom .socials { opacity: 0; visibility: hidden; transition: opacity .35s, visibility 0s .35s; } /* visible (and focusable) instantly on return */
+.brand { display: block; text-decoration: none; text-align: left; text-transform: inherit; }
+.brand-heading { margin-bottom: 10px; font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; line-height: 1.15; text-transform: uppercase; color: #0e3270; } /* nav style, a shade darker than --ink-dk */
+.brand-title { display: flex; height: 1.15em; line-height: 1.15em; white-space: pre; }
+.brand-slot { display: block; flex: none; height: 1.15em; overflow: hidden; }
+.brand-reel { display: block; will-change: transform; }
+.brand-glyph { display: block; height: 1.15em; line-height: 1.15em; text-align: left; }
+nav { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+nav button { font-size: clamp(30px, 3.6vw, 46px); font-weight: 700; line-height: 1.15; text-transform: uppercase; color: var(--ink-dk); opacity: .45; transition: opacity .2s; }
+nav button.hl { opacity: 1; }
+
+.socials { position: fixed; z-index: 2; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; gap: 14px; transition: opacity .35s; }
+.socials a { display: grid; place-items: center; width: 40px; height: 40px; color: #fff; opacity: .8; transition: opacity .2s; }
+.socials a:hover { opacity: 1; }
+.socials svg { width: 22px; height: 22px; }
+
+/* section view: the orange's screen blown up (size set from the 3D layout; full screen without it / on mobile).
+   Styled as the handheld's own UI: VT323 only, 2px borders with pixel-notched corners, hard bevels, no blur or rounding */
+#panel { position: fixed; inset: 0; margin: auto; width: var(--pw, 100%); height: var(--ph, 100%); border-radius: var(--pr, 0); z-index: 3; overflow: auto; overscroll-behavior: contain; outline: none; background: var(--screen); color: var(--text);
+  font: 21px/1.25 VT323, monospace; -webkit-font-smoothing: auto; scrollbar-color: var(--dim) transparent;
+  opacity: 0; visibility: hidden; transition: opacity .35s, visibility 0s .35s; }
+body.open #panel { opacity: 1; visibility: visible; transition: opacity .35s; }
+#panel b, #panel h3 { font-weight: 400; } /* VT323 has one weight; faux bold smears the pixels */
+#panel :focus-visible { outline-color: #fff; outline-offset: -4px; border-radius: 0; } /* inset: clip-path would cut an outside ring */
+#back, .card, .thumb, .links a, .prose dl { clip-path: var(--notch); }
+#ph { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: 16px; max-width: 1000px; margin: 0 auto; padding: 22px 24px 12px; background: var(--screen); border-bottom: 2px solid rgba(255, 255, 255, .1); font-size: 34px; line-height: 1; text-transform: uppercase; }
+#back { display: flex; align-items: center; gap: 8px; padding: 5px 12px 5px 10px; background: var(--blue); border: 2px solid #0c4593; color: #fff; font-size: 22px; line-height: 1; text-transform: uppercase;
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, .35), inset -2px -2px 0 rgba(0, 0, 0, .3); }
+#back::before { content: ''; width: 8px; height: 14px; background: currentColor; /* stepped pixel triangle */
+  clip-path: polygon(6px 0, 8px 0, 8px 14px, 6px 14px, 6px 12px, 4px 12px, 4px 10px, 2px 10px, 2px 8px, 0 8px, 0 6px, 2px 6px, 2px 4px, 4px 4px, 4px 2px, 6px 2px); }
+#back:hover { background: #3b95f5; }
+#back:active { transform: translateY(2px); box-shadow: inset 2px 2px 0 rgba(0, 0, 0, .3); }
+#ph-l { flex: 1; color: var(--lemon); }
+#ph-r { color: var(--dim); }
+#pb { max-width: 1000px; margin: 0 auto; padding: 16px 24px 48px; display: grid; gap: 12px; align-content: start; }
+#pb.projects { grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); }
+#pb.projects .card { align-items: flex-start; }
+.card { display: flex; align-items: center; gap: 14px; padding: 12px 14px; background: rgba(255, 255, 255, .04); border: 2px solid rgba(255, 255, 255, .1); text-decoration: none; cursor: pointer; transition: background .15s, border-color .15s; }
+.card:hover { background: rgba(255, 255, 255, .08); }
+.card.sel { border-color: var(--lemon); background: rgba(255, 217, 59, .1); }
+.thumb { flex: none; align-self: flex-start; width: 72px; height: 72px; display: grid; place-items: center; font-size: 52px; line-height: 1; color: #fff;
+  box-shadow: inset 4px 4px 0 rgba(255, 255, 255, .3), inset -4px -4px 0 rgba(0, 0, 0, .25); }
+.card h3 { font-size: 28px; line-height: 1; color: #fff; }
+.card p { margin-top: 4px; color: rgba(238, 246, 255, .85); }
+.card .meta { font-size: 18px; color: var(--dim); }
+.card .links { display: flex; gap: 10px; margin-top: 8px; }
+.links a { padding: 1px 8px 0; border: 2px solid; font-size: 18px; text-decoration: none; text-transform: uppercase; color: var(--lemon); }
+.links a:hover { background: var(--lemon); border-color: var(--lemon); color: var(--screen); }
+/* Stack library: a shelf of game cases inside the handheld screen. */
+#panel { container-type: size; }
+#panel[data-view="stack"] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; }
+#panel[data-view="stack"] #ph { width: 100%; }
+#pb.stack { width: 100%; min-height: 0; padding: 10px 0 12px; gap: 6px; overflow-x: hidden; overflow-y: auto; }
+.library-heading, .library-controls, .game-details, .library-hint { margin-inline: 24px; }
+.library-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--dim); font-size: 18px; text-transform: uppercase; }
+.library-heading span:first-child { color: var(--lemon); }
+.game-shelf { --case-width: clamp(160px, 30vw, 220px); display: flex; gap: 18px; padding: 10px max(0px, calc((100% - var(--case-width)) / 2)); overflow-x: auto; scrollbar-width: none; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; touch-action: pan-x pan-y; }
+.game-shelf::-webkit-scrollbar { display: none; }
+.game-case { position: relative; flex: 0 0 var(--case-width); scroll-snap-align: center; scroll-snap-stop: always; text-align: left; background: #0b2346; border: 2px solid #6280a3; box-shadow: 5px 5px 0 #091f3d; transform: scale(.91); opacity: .58; transition: transform .25s, opacity .25s, border-color .25s; }
+.game-case:hover { opacity: .9; }
+.game-case.sel { transform: scale(1); opacity: 1; border-color: var(--lemon); box-shadow: 5px 5px 0 #091f3d, 0 0 22px #ffd93b18; }
+.game-cover { position: relative; display: block; height: clamp(210px, 39cqh, 310px); overflow: hidden; isolation: isolate; }
+.game-title, .game-subtitle, .cover-note { position: absolute; z-index: 2; display: block; }
+.game-title { font-size: 32px; line-height: .95; }
+.game-subtitle { font-size: 15px; line-height: 1.1; }
+.cover-note { font-size: 12px; letter-spacing: 1px; }
+.game-art { position: absolute; width: 130px; height: 130px; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+/* Every game has its own art direction, composition, and typography. */
+.cover-typescript { background: #2767df; color: #f2f1df; font-family: Rubik, sans-serif; }
+.cover-typescript::before { content: ''; position: absolute; width: 240%; height: 40%; left: -70%; top: 29%; background: #e8f1cf; transform: rotate(-42deg); }
+.cover-typescript::after { content: ''; position: absolute; inset: auto 0 0; height: 73px; background: #102858; z-index: 1; }
+.cover-typescript .cover-monogram { position: absolute; top: 28%; right: 9px; color: #102858; font-size: 88px; font-weight: 900; letter-spacing: -9px; line-height: 1; transform: rotate(-8deg); }
+.cover-typescript .game-title { left: 12px; bottom: 37px; font-size: 24px; font-weight: 900; letter-spacing: -1px; }
+.cover-typescript .game-subtitle { left: 12px; bottom: 13px; font: 14px VT323, monospace; text-transform: uppercase; }
+.cover-typescript .cover-note { top: 12px; left: 12px; font: 14px VT323, monospace; border: 1px solid; padding: 3px 5px; }
+.cover-react { color: #b5faff; background: radial-gradient(circle at 60% 45%, #2c1c6d, #060f2b 70%); }
+.cover-react::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, #f1ecff 1px, transparent 1.5px), radial-gradient(circle, #68ddeb 1px, transparent 1.5px); background-size: 31px 43px, 57px 29px; background-position: 8px 10px, 25px 6px; opacity: .55; }
+.cover-react .game-art { width: 160px; height: 160px; top: 43%; color: #73edf7; filter: drop-shadow(0 0 10px #4b9bd5); transform: translate(-50%, -50%) rotate(-20deg); }
+.cover-react .game-title { bottom: 32px; width: 100%; text-align: center; font: 700 34px Rubik, sans-serif; letter-spacing: 3px; }
+.cover-react .game-subtitle { bottom: 14px; width: 100%; text-align: center; letter-spacing: 2px; text-transform: uppercase; font-size: 13px; }
+.cover-python { color: #273c2d; background: #d6c89c; font-family: Georgia, serif; }
+.cover-python::before { content: ''; position: absolute; inset: -20px; background: repeating-radial-gradient(ellipse at 5% 40%, transparent 0 14px, #796d4733 15px 16px, transparent 17px 26px); transform: rotate(12deg); }
+.cover-python::after { content: ''; position: absolute; width: 108px; height: 108px; border-radius: 50%; background: #bb6b35; top: 31%; left: 26%; box-shadow: 0 0 0 6px #b86c3420; }
+.cover-python .game-art { top: 54%; width: 106px; height: 106px; z-index: 1; color: #ead9ab; transform: translate(-50%, -50%) rotate(-12deg); }
+.cover-python .game-title { top: 15px; left: 12px; font-size: 35px; font-weight: bold; font-style: italic; }
+.cover-python .game-subtitle { left: 12px; bottom: 14px; width: 75%; font-size: 20px; font-style: italic; }
+.cover-python .cover-note { top: 14px; right: 10px; writing-mode: vertical-rl; font: 12px VT323, monospace; }
+.cover-next { color: #141414; background: #e9e8e2; font-family: Rubik, sans-serif; }
+.cover-next::before { content: ''; position: absolute; width: 170px; height: 170px; border-radius: 50%; background: #191919; left: 42%; top: 30%; }
+.cover-next .game-art { width: 120px; height: 150px; top: 64%; left: 65%; color: #d7d4c9; stroke-width: 1; }
+.cover-next .game-title { top: 15px; left: 12px; font-size: 36px; font-weight: 500; letter-spacing: -2px; }
+.cover-next .game-subtitle { top: 59px; left: 14px; width: 65%; font-size: 11px; line-height: 1.5; text-transform: uppercase; letter-spacing: 2px; }
+.cover-next .cover-note { left: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 3px; background: #e9e8e2; font: 11px VT323, monospace; }
+.cover-flask { color: #eed39d; background: radial-gradient(ellipse at 70% 60%, #6a396d, #271b35 70%); font-family: Georgia, serif; }
+.cover-flask::before { content: ''; position: absolute; inset: 8px; border: 1px solid #c8a46e; outline: 1px solid #c8a46e55; outline-offset: -5px; }
+.cover-flask .game-title { top: 20px; width: 100%; text-align: center; font-size: 40px; font-style: italic; }
+.cover-flask .game-subtitle { bottom: 19px; width: 100%; text-align: center; font-size: 17px; font-style: italic; }
+.cover-flask .game-art { width: 110px; height: 110px; top: 56%; color: #dba9da; filter: drop-shadow(0 0 13px #e66efb88); }
+.cover-postgres { color: #d4ebf8; background-color: #174a78; background-image: linear-gradient(#92d4ff20 1px, transparent 1px), linear-gradient(90deg, #92d4ff20 1px, transparent 1px); background-size: 14px 14px; }
+.cover-postgres .game-title { left: 10px; top: 17px; font-size: 29px; text-transform: uppercase; border-bottom: 2px solid; padding-bottom: 6px; }
+.cover-postgres .game-subtitle { left: 11px; top: 58px; text-transform: uppercase; letter-spacing: 1px; }
+.cover-postgres .game-art { width: 148px; height: 148px; top: 65%; stroke-width: 1.5; }
+.cover-postgres .cover-note { bottom: 9px; right: 10px; font-size: 11px; }
+.cover-mysql { color: #ffb9e9; background: linear-gradient(#231044 25%, #6b2455 72%, #130c35); }
+.cover-mysql::before { content: ''; position: absolute; width: 116px; height: 116px; border-radius: 50%; top: 18%; left: 24%; background: repeating-linear-gradient(0deg, #a82b7c 0 3px, transparent 3px 6px), linear-gradient(#ffd577, #f8759f); }
+.cover-mysql::after { content: ''; position: absolute; inset: 62% -50% -45%; background-image: linear-gradient(#e45bdd77 1px, transparent 1px), linear-gradient(90deg, #e45bdd77 1px, transparent 1px); background-size: 20px 18px; transform: perspective(90px) rotateX(42deg); }
+.cover-mysql .game-title { top: 12px; left: 10px; font: italic 900 34px Rubik, sans-serif; color: #f9d2f4; text-shadow: 3px 3px #6f2696; }
+.cover-mysql .game-art { width: 90px; height: 90px; top: 52%; color: #fff5b4; stroke-width: 2; }
+.cover-mysql .game-subtitle { bottom: 17px; right: 12px; font-size: 25px; font-style: italic; color: #6df9f6; text-shadow: 2px 2px #692ba0; }
+.cover-docker { color: #083b56; background: linear-gradient(#c5e7dd 0 59%, #26799a 59% 65%, #145c7f 65% 78%, #0b4267 78%); }
+.cover-docker::before { content: ''; position: absolute; width: 52px; height: 52px; border-radius: 50%; background: #ed9957; top: 14px; right: 16px; }
+.cover-docker .game-title { left: 12px; top: 18px; font: 900 30px Rubik, sans-serif; letter-spacing: -1px; }
+.cover-docker .game-art { top: 54%; width: 155px; height: 155px; color: #073d57; stroke-width: 3.5; }
+.cover-docker .game-subtitle { left: 12px; bottom: 16px; width: 70%; color: #e5f1d8; font-size: 22px; line-height: .9; text-transform: uppercase; }
+.cover-aws { color: #ffdd9e; background: linear-gradient(#422946, #c96940 62%, #e9a95a); }
+.cover-aws::before { content: ''; position: absolute; width: 135px; height: 135px; border-radius: 50%; top: 25%; left: 20%; background: #f3c478; box-shadow: 0 0 0 9px #f3c47822, 0 0 0 18px #f3c47811; }
+.cover-aws::after { content: ''; position: absolute; inset: 65% 0 0; background: #332d48; clip-path: polygon(0 25%, 15% 0, 39% 50%, 62% 15%, 100% 50%, 100% 100%, 0 100%); }
+.cover-aws .game-title { top: 9px; right: 13px; font: italic 900 48px Rubik, sans-serif; letter-spacing: -3px; }
+.cover-aws .game-art { width: 104px; height: 104px; top: 51%; color: #614048; }
+.cover-aws .game-subtitle { bottom: 16px; left: 12px; font-size: 25px; text-transform: uppercase; line-height: .9; width: 70%; }
+.library-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.shelf-arrow { width: 42px; height: 32px; border: 2px solid #6387b4; background: #214d82; font-size: 27px; line-height: 1; box-shadow: inset 2px 2px 0 #ffffff20; }
+.shelf-arrow:hover { color: var(--lemon); border-color: var(--lemon); }
+.shelf-arrow:active { transform: translateY(2px); }
+.shelf-dots { display: flex; justify-content: center; flex-wrap: wrap; }
+.shelf-dot { display: grid; place-items: center; width: 24px; height: 28px; }
+.shelf-dot::before { content: ''; width: 6px; height: 6px; background: #6387b4; }
+.shelf-dot[aria-current="true"]::before { background: var(--lemon); box-shadow: 0 0 8px #ffd93b55; }
+.game-details { border-top: 2px solid #ffffff20; padding-top: 12px; }
+.game-details-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.game-details h3 { font-size: 30px; color: var(--lemon); line-height: 1; }
+.game-genre { color: var(--dim); font-size: 17px; text-transform: uppercase; }
+.game-description { margin-top: 6px; color: #d5e5f8; font-size: 19px; }
+.game-projects { margin-top: 7px; color: var(--dim); font-size: 18px; }
+.library-hint { display: none; color: var(--dim); text-align: center; font-size: 16px; }
+#panel[data-view="stack"] > .library-hint { display: block; margin: 0 auto; width: 100%; max-width: 1000px; padding: 12px 16px max(24px, env(safe-area-inset-bottom)); background: var(--screen); }
+@media (max-width: 480px) {
+  .library-heading, .library-controls, .game-details, .library-hint { margin-inline: 16px; }
+  .game-shelf { --case-width: 180px; gap: 12px; }
+  .shelf-dot { width: 20px; }
+}
+.prose { max-width: 680px; padding: 8px 0 16px; font-size: 23px; line-height: 1.3; }
+.prose h3 { font-size: clamp(52px, 8vw, 76px); line-height: 1; }
+.prose .role { color: var(--lemon); margin: 2px 0 18px; text-transform: uppercase; }
+.prose p + p { margin-top: 12px; }
+.prose dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; margin-top: 20px; padding: 12px 16px; background: rgba(255, 255, 255, .04); border: 2px solid rgba(255, 255, 255, .1); }
+.prose dt { color: var(--dim); text-transform: uppercase; }
+.lead { padding: 4px 2px 6px; font-size: 23px; color: rgba(238, 246, 255, .85); }
+.link .thumb { align-self: center; width: 48px; height: 48px; background: var(--blue); }
+.link svg { width: 24px; height: 24px; }
+.link span + span { flex: 1; display: flex; flex-direction: column; }
+.link b { font-size: 26px; line-height: 1; }
+.link small { font-size: 18px; color: var(--dim); }
+.link em { font-style: normal; font-size: 32px; color: var(--lemon); }
+
+/* loader */
+#loader { position: fixed; inset: 0; z-index: 10; display: grid; place-content: center; background: var(--sky-top); transition: opacity .5s, visibility .5s; }
+#loader svg { width: 64px; animation: spin 1.4s linear infinite; }
+@keyframes spin { to { transform: rotate(1turn); } }
+body.ready #loader { opacity: 0; visibility: hidden; }
+
+@media (max-width: 760px) {
+  .side { inset: 0; padding: max(16px, env(safe-area-inset-top)) 16px 72px; justify-content: space-between; }
+  .brand-heading { align-self: center; margin: 0; font-size: clamp(26px, 7.5vw, 36px); }
+  .brand-title { font-size: min(1em, 7.2vw); }
+  nav { display: grid; grid-template-columns: 1fr 1fr; justify-items: center; gap: 2px 12px; width: 100%; }
+  nav button { font-size: clamp(26px, 7.5vw, 36px); }
+  #ph, #pb { padding-left: 16px; padding-right: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cloud { animation: none; transform: translateX(var(--x)); }
+  *, *::before { transition-duration: .01s !important; }
+}
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true">
+  <i class="cloud" style="--y:5%;--w:max(34vw,300px);--d:140s;--dl:-30s;--x:10vw"></i>
+  <i class="cloud" style="--y:26%;--w:max(22vw,200px);--d:110s;--dl:-80s;--o:.8;--x:70vw"></i>
+  <i class="cloud" style="--y:52%;--w:max(48vw,380px);--d:180s;--dl:-20s;--b:18px;--x:-10vw"></i>
+  <i class="cloud" style="--y:68%;--w:max(30vw,260px);--d:130s;--dl:-100s;--x:60vw"></i>
+  <i class="cloud" style="--y:14%;--w:max(18vw,180px);--d:95s;--dl:-55s;--o:.7;--x:40vw"></i>
+  <i class="cloud" style="--y:80%;--w:max(60vw,460px);--d:220s;--dl:-150s;--b:22px;--x:20vw"></i>
+</div>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="side">
+  <h1 class="brand-heading"><button class="brand" type="button" aria-label="Show Software Developer"><span class="brand-title" aria-hidden="true"></span></button></h1>
+  <nav aria-label="Sections">
+    <button data-s="projects">Projects</button>
+    <button data-s="about">About</button>
+    <button data-s="stack">Stack</button>
+    <button data-s="contact">Contact</button>
+  </nav>
+</header>
+
+<section id="panel" tabindex="-1" aria-labelledby="ph-l">
+  <header id="ph"><button id="back">Back</button><span id="ph-l"></span><span id="ph-r"></span></header>
+  <div id="pb"></div>
+  <p class="library-hint">← → browse · swipe the shelf · select a cover</p>
+</section>
+
+<footer class="socials"></footer>
+
+<div id="loader" aria-hidden="true">
+  <svg viewBox="0 0 100 100"><path d="M52 8C76 9 93 27 91 52 89 75 71 93 47 91 24 89 8 72 10 48 12 25 29 7 52 8Z" fill="#ff8c1a"/></svg>
+</div>
+
+<script type="module">
+const $ = s => document.querySelector(s);
+const TAU = Math.PI * 2;
+const SECTIONS = ['projects', 'about', 'stack', 'contact'];
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const now = () => performance.now() / 1000;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const ext = u => u.startsWith('mailto:') ? '' : ' target="_blank" rel="noopener"';
+const pretty = u => u.replace(/^(https?:\/\/(www\.)?|mailto:)/, '').replace(/\/$/, '');
+const ICONS = {
+  github: '<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>',
+  linkedin: '<path fill-rule="evenodd" d="M3 0h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3zM3.4 6.1v6.6h2.1V6.1zm1.05-3.2a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM7 6.1v6.6h2.1V9.3c0-.9.4-1.5 1.2-1.5.7 0 1 .5 1 1.4v3.5h2.1V8.6c0-1.8-1-2.7-2.4-2.7-1 0-1.6.5-1.9 1V6.1z"/>',
+  mail: '<rect x="1.3" y="3" width="13.4" height="10" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m2 4.2 6 4.6 6-4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
+  cv: '<path d="M3.2 1h6.6l3 3v11H3.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5.6 7.5h4.8M5.6 10.2h4.8M5.6 4.8H8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>',
+};
+const icon = k => `<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">${ICONS[k] || ICONS.cv}</svg>`;
+
+// ---------- static content ----------
+document.title = `${DATA.name} · ${DATA.role}`;
+// Live reels retain their positions when clicks change speed and destination.
+const brandButton = $('.brand'), brandTitle = $('.brand-title');
+const brandMeasure = document.createElement('canvas').getContext('2d');
+const brandName = DATA.name.toUpperCase(), brandRole = DATA.role.toUpperCase();
+let brandText = brandName, brandDesired = brandName, brandReels = [], brandSpeed = 1;
+let brandReturnTimer = null, brandFrame = null, brandLastTime = 0;
+function settleBrand(text) {
+  brandText = text;
+  brandTitle.textContent = text;
+  brandButton.setAttribute('aria-label', text === brandName
+    ? DATA.name + ': show ' + DATA.role : DATA.role + ': show ' + DATA.name);
+}
+function scheduleBrandReturn() {
+  if (brandDesired !== brandRole) return;
+  brandReturnTimer = setTimeout(() => {
+    brandReturnTimer = null;
+    brandDesired = brandName;
+    if (reduced) settleBrand(brandName);
+    else spinBrand();
+  }, 2000);
+}
+function drawBrandReel(reel) {
+  // Three rows make a seamless repeating name/title/name strip.
+  reel.element.style.transform = 'translateY(-' + (reel.position % 2) * 1.15 + 'em)';
+  reel.slot.style.width = reel.width + 'em';
+}
+function animateBrand(time) {
+  const dt = Math.min((time - brandLastTime) / 1000, .035);
+  brandLastTime = time;
+  let moving = false;
+  for (const reel of brandReels) {
+    if (time < reel.start) { moving = true; continue; }
+    const distance = reel.goal - reel.position;
+    // Decelerate into the selected row. Speed changes take effect on the next frame.
+    const velocity = Math.min(12 * brandSpeed, Math.sqrt(80 * brandSpeed * brandSpeed * distance));
+    reel.position += Math.min(distance, velocity * dt);
+    const targetWidth = reel.widths[brandDesired === brandName ? 0 : 1];
+    reel.width += (targetWidth - reel.width) * (1 - Math.exp(-dt * 16 * brandSpeed));
+    if (reel.goal - reel.position < .001) reel.position = reel.goal;
+    else moving = true;
+    drawBrandReel(reel);
+  }
+  if (moving) brandFrame = requestAnimationFrame(animateBrand);
+  else {
+    brandFrame = null;
+    brandReels = [];
+    brandSpeed = 1;
+    settleBrand(brandDesired);
+    scheduleBrandReturn();
+  }
+}
+function spinBrand() {
+  const time = performance.now(), parity = brandDesired === brandName ? 0 : 1;
+  if (brandReels.length) {
+    brandSpeed = Math.min(brandSpeed * 1.6, 6);
+    for (const reel of brandReels) {
+      // Retarget the currently moving strip; never queue another complete animation.
+      let goal = Math.ceil(reel.position + .5);
+      if (goal % 2 !== parity) goal++;
+      reel.goal = goal + 2;
+      reel.start = time;
+    }
+    return;
+  }
+  const count = Math.max(brandName.length, brandRole.length);
+  const font = getComputedStyle(brandTitle), size = parseFloat(font.fontSize);
+  brandMeasure.font = font.fontWeight + ' ' + font.fontSize + ' ' + font.fontFamily;
+  const widths = text => Array.from({ length: count }, (_, i) =>
+    (brandMeasure.measureText(text.slice(0, i + 1)).width - brandMeasure.measureText(text.slice(0, i)).width) / size);
+  const nameWidths = widths(brandName), roleWidths = widths(brandRole);
+  brandTitle.innerHTML = Array.from({ length: count }, (_, i) =>
+    '<span class="brand-slot"><span class="brand-reel">' + [brandName, brandRole, brandName].map(text =>
+      '<span class="brand-glyph">' + esc(text[i] || '\u00a0') + '</span>').join('') + '</span></span>').join('');
+  const initial = brandText === brandName ? 0 : 1;
+  brandReels = [...brandTitle.querySelectorAll('.brand-reel')].map((element, i) => {
+    const reel = { element, slot: element.parentElement, position: initial, goal: initial + 5,
+      start: time + i * 18, widths: [nameWidths[i], roleWidths[i]], width: initial ? roleWidths[i] : nameWidths[i] };
+    drawBrandReel(reel);
+    return reel;
+  });
+  brandLastTime = time;
+  brandFrame = requestAnimationFrame(animateBrand);
+}
+settleBrand(brandText);
+brandButton.onclick = () => {
+  clearTimeout(brandReturnTimer);
+  brandReturnTimer = null;
+  brandDesired = brandDesired === brandName ? brandRole : brandName;
+  if (reduced) {
+    settleBrand(brandDesired);
+    scheduleBrandReturn();
+  } else spinBrand();
+};
+$('.socials').innerHTML = DATA.links.map(l => `<a href="${esc(l.url)}"${ext(l.url)} aria-label="${esc(l.label)}">${icon(l.icon)}</a>`).join('');
+
+// ---------- state ----------
+let route = 'home', sel = 0, hl = 0, has3d = false;
+let fx = () => {}, zoomTo = () => {}; // button press + zoom animations, set once 3D is up
+const scr = { state: 'saver', p: 0 }; // the orange's screen: saver (the PS2 void) | in (wisps sink, p 0→1) | out (back to saver)
+const list = r => ({ projects: DATA.projects, stack: DATA.stack, contact: DATA.links })[r] || [];
+const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+const ramp = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+
+// ---------- nav ----------
+const navBtns = [...document.querySelectorAll('nav button')];
+function setHl(i, focus) {
+  hl = i;
+  navBtns.forEach((b, j) => b.classList.toggle('hl', j === i));
+  if (focus) navBtns[i].focus({ preventScroll: true });
+}
+navBtns.forEach((b, i) => { b.onclick = () => location.hash = b.dataset.s; b.onmouseenter = b.onfocus = () => setHl(i); });
+setHl(0);
+
+// ---------- section view (full-screen "inside the screen" page) ----------
+const pb = $('#pb'), panel = $('#panel');
+const HEAD = { projects: 'Projects', about: 'About', stack: 'Stack', contact: 'Contact' };
+// Original cover art and catalogue copy; proficiency scores aren't game ratings.
+const GAMES = {
+  TypeScript: ['#204eac', '#8ddcff', 'Action / adventure', 'The type crusade', 'Part of my day-to-day React/Vite front-end work at Quantspark, and the language behind my React packages and personal projects.', 'shield'],
+  React: ['#13596c', '#8af3ec', 'World builder', 'Component odyssey', 'Used on a macro-space analytical platform at Quantspark and in personal projects, from credit-score visualisations to interactive node graphs.', 'orbit'],
+  Python: ['#574091', '#ffdc85', 'Puzzle / exploration', 'Serpent expedition', 'Used for back-end development and data pipelines at Quantspark, plus the credit-scoring model behind my full-stack credit application.', 'snake'],
+  'Next.js': ['#34385d', '#d9d9ff', 'Open world', 'Beyond the router', 'Connect pages, server logic, and polished front ends in one full-stack adventure.', 'portal'],
+  Flask: ['#7d3a55', '#ffb4b7', 'Alchemy / crafting', 'The API atelier', 'Part of the Python/Flask/Celery back-end stack I work with on a macro-space analytical platform at Quantspark.', 'flask'],
+  PostgreSQL: ['#244d91', '#a0d6ff', 'Strategy', 'Citadel of data', 'One of the relational databases in my toolkit, alongside MySQL. Kabanos supports PostgreSQL-backed task storage.', 'citadel'],
+  MySQL: ['#86602b', '#ffe0a0', 'Resource management', 'Query quest', 'Used in the infrastructure of a Quantspark analytical platform, alongside Redis, MinIO, and Docker. Also supported by Kabanos.', 'database'],
+  Docker: ['#1e608d', '#8ee9ff', 'Sandbox / building', 'Container islands', 'Part of the application infrastructure I work with at Quantspark, where I have also managed production deployments end to end.', 'cargo'],
+  AWS: ['#7c432a', '#ffcb85', 'Cloud strategy', 'Skyward systems', 'My deployment toolkit includes AWS EC2, S3, and Lambda, alongside Linux and Docker.', 'cloud'],
+};
+function coverArt(kind) {
+  const shapes = {
+    shield: '<path d="M80 14 128 32v43c0 29-48 56-48 56S32 104 32 75V32Z"/><path d="m64 53-17 19 17 19m32-38 17 19-17 19M87 46 73 99"/>',
+    orbit: '<ellipse cx="80" cy="74" rx="66" ry="25"/><ellipse cx="80" cy="74" rx="66" ry="25" transform="rotate(60 80 74)"/><ellipse cx="80" cy="74" rx="66" ry="25" transform="rotate(120 80 74)"/><circle cx="80" cy="74" r="9" fill="currentColor"/>',
+    snake: '<path d="M43 69V39q0-17 18-17h30q18 0 18 17v20H64q-21 0-21 21v24H26V69Zm74 10v30q0 17-18 17H69q-18 0-18-17V89h45q21 0 21-21V44h17v35Z"/><path d="M75 38h1m10 72h1" stroke-width="8"/>',
+    portal: '<path d="M27 126V38L80 10l53 28v88M44 126V48l36-19 36 19v78M65 125V62l15-9 15 9v63M13 126h134M80 73v34m0 0-9-10m9 10 9-10"/>',
+    flask: '<path d="M61 15h38M68 16v43l-35 54q-8 15 10 15h74q18 0 10-15L92 59V16M48 93h64"/><circle cx="76" cy="105" r="4"/><circle cx="94" cy="80" r="3"/><path d="m32 36 5-9 5 9-5 9Zm86 13 5-9 5 9-5 9Z"/>',
+    citadel: '<path d="M24 128V59h29v69m54 0V59h29v69M53 128V32h54v96M19 59V43h10v8h10v-8h14v16m54 0V43h10v8h10v-8h14v16M48 32V16h12v8h14v-8h12v8h14v-8h12v16M69 128v-25q11-15 22 0v25M72 49h16v17H72Zm0 32h16M12 129h136"/>',
+    database: '<ellipse cx="80" cy="33" rx="49" ry="19"/><path d="M31 33v80c0 25 98 25 98 0V33M31 59c0 25 98 25 98 0M31 86c0 25 98 25 98 0"/><path d="m66 60 9 7 18-15"/>',
+    cargo: '<path d="M19 88h122l-17 32H38ZM32 88V64h28v24m0 0V64h28v24m0 0V64h28v24M60 64V40h28v24m0 0V40h28v24M88 40V16h28v24M14 132q16-11 32 0t32 0 32 0 32 0"/>',
+    cloud: '<path d="M42 83C8 83 11 45 37 42c-2-31 43-41 57-15 30-15 51 10 40 30 25 13 12 36-8 36H42ZM80 94v22M36 94v14m88-8v8M25 116h22v17H25Zm44 0h22v17H69Zm44 0h22v17h-22Z"/>',
+  };
+  return `<svg class="game-art" viewBox="0 0 160 148" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" aria-hidden="true">${shapes[kind] || shapes.shield}</svg>`;
+}
+function renderLibrary() {
+  return `<div class="library-heading"><span>Choose your game</span><span>${DATA.stack.length} in collection</span></div>
+    <div class="game-shelf" role="group" aria-roledescription="carousel" aria-label="Technology game catalogue">${DATA.stack.map(([name], i) => {
+      const [, , , subtitle, , art] = GAMES[name] || ['#204eac', '#8ddcff', 'Adventure', 'New horizons', '', 'shield'];
+      const skin = { TypeScript: 'typescript', React: 'react', Python: 'python', 'Next.js': 'next', Flask: 'flask', PostgreSQL: 'postgres', MySQL: 'mysql', Docker: 'docker', AWS: 'aws' }[name] || 'typescript';
+      const decoration = {
+        TypeScript: '<span class="cover-note">STRICT MODE / ON</span><span class="cover-monogram" aria-hidden="true">TS</span>',
+        Python: '<span class="cover-note">FIELD NOTES / VOL. III</span>',
+        'Next.js': '<span class="cover-note">ENTER THE NEXT CHAPTER ↗</span>',
+        PostgreSQL: '<span class="cover-note">SCHEMA 01 / RELATIONAL SYSTEMS</span>',
+      }[name] || '';
+      return `<button type="button" class="game-case" data-i="${i}" aria-label="${esc(name)}: ${esc(subtitle)}, ${i + 1} of ${DATA.stack.length}">
+        <span class="game-cover cover-${skin}">${decoration}${name === 'TypeScript' ? '' : coverArt(art)}<span class="game-title">${esc(name)}</span><span class="game-subtitle">${esc(subtitle)}</span></span></button>`;
+    }).join('')}</div>
+    <div class="library-controls"><button type="button" class="shelf-arrow" data-step="-1" aria-label="Previous game">‹</button><div class="shelf-dots" aria-label="Choose a game">${DATA.stack.map(([name], i) => `<button type="button" class="shelf-dot" data-game="${i}" aria-label="Select ${esc(name)}"></button>`).join('')}</div><button type="button" class="shelf-arrow" data-step="1" aria-label="Next game">›</button></div>
+    <div class="game-details" aria-live="polite" aria-atomic="true"></div>`;
+}
+function updateGame() {
+  const [name] = DATA.stack[sel];
+  const game = GAMES[name];
+  const projects = DATA.projects.filter(p => p.stack.includes(name)).map(p => p.name);
+  pb.querySelector('.game-details').innerHTML = `<div class="game-details-top"><h3>${esc(name)}</h3><span class="game-genre">${esc(game?.[2] || 'Adventure')}</span></div><p class="game-description">${esc(game?.[4] || 'Another tool in my development collection.')}</p>${projects.length ? `<p class="game-projects">Featured in: ${projects.map(esc).join(' · ')}</p>` : ''}`;
+  pb.querySelectorAll('.game-case').forEach(el => el.setAttribute('aria-pressed', String(+el.dataset.i === sel)));
+  pb.querySelectorAll('.shelf-dot').forEach(el => el.setAttribute('aria-current', String(+el.dataset.game === sel)));
+}
+let shelfTimer, shelfObserver;
+function wireLibrary() {
+  const shelf = pb.querySelector('.game-shelf');
+  shelf.addEventListener('scroll', () => {
+    clearTimeout(shelfTimer);
+    shelfTimer = setTimeout(() => {
+      if (route !== 'stack' || !shelf.isConnected) return;
+      const center = shelf.getBoundingClientRect().left + shelf.clientWidth / 2;
+      const cards = [...shelf.children];
+      const nearest = cards.reduce((a, b) => Math.abs(a.getBoundingClientRect().left + a.offsetWidth / 2 - center) < Math.abs(b.getBoundingClientRect().left + b.offsetWidth / 2 - center) ? a : b);
+      sel = +nearest.dataset.i;
+      markSel(false);
+    }, 140);
+  }, { passive: true });
+  // Keep the selected case centered when the handheld or viewport changes size.
+  shelfObserver = new ResizeObserver(() => {
+    if (route === 'stack') centerGame(false);
+  });
+  shelfObserver.observe(shelf);
+}
+function centerGame(animate = true) {
+  const shelf = pb.querySelector('.game-shelf'), card = shelf?.children[sel];
+  if (card) shelf.scrollTo({ left: card.offsetLeft - shelf.offsetLeft - (shelf.clientWidth - card.offsetWidth) / 2, behavior: animate && !reduced ? 'smooth' : 'instant' });
+}
+function renderPanel() {
+  clearTimeout(shelfTimer);
+  shelfObserver?.disconnect();
+  const r = route;
+  panel.dataset.view = r;
+  pb.className = r;
+  pb.innerHTML =
+    r === 'projects' ? DATA.projects.map((p, i) => `
+      <article class="card" data-i="${i}">
+        <div class="thumb" style="background:${esc(p.color)}${p.ink ? `;color:${esc(p.ink)}` : ''}">${esc(p.name[0])}</div>
+        <div><h3>${esc(p.name)}</h3><p>${esc(p.blurb)}</p>
+          ${p.year || p.stack.length ? `<p class="meta">${[p.year, ...p.stack].filter(Boolean).map(esc).join(' · ')}</p>` : ''}
+          <p class="links">${p.link ? `<a href="${esc(p.link)}"${ext(p.link)}>Live ›</a>` : ''}${p.repo ? `<a href="${esc(p.repo)}"${ext(p.repo)}>Code ›</a>` : ''}${p.report ? `<a href="${esc(p.report)}"${ext(p.report)}>Report ›</a>` : ''}</p>
+        </div>
+      </article>`).join('')
+    : r === 'about' ? `<div class="prose"><h3>${esc(DATA.name)}</h3><p class="role">${esc(DATA.role)}</p>${DATA.about.map(p => `<p>${esc(p)}</p>`).join('')}
+        <dl>${DATA.facts.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>`
+    : r === 'stack' ? renderLibrary()
+    : `<p class="lead">${esc(DATA.contactNote)}</p>` + DATA.links.map((l, i) => `<a class="card link" data-i="${i}" href="${esc(l.url)}"${ext(l.url)}><span class="thumb">${icon(l.icon)}</span><span><b>${esc(l.label)}</b><small>${esc(pretty(l.url))}</small></span><em>›</em></a>`).join('');
+  panel.scrollTop = 0;
+  pb.scrollTop = 0;
+  markSel(false);
+  if (r === 'stack') wireLibrary();
+}
+function markSel(scroll = true) {
+  const n = list(route).length;
+  $('#ph-l').textContent = HEAD[route];
+  $('#ph-r').textContent = { projects: `${sel + 1} / ${n}`, stack: `${String(sel + 1).padStart(2, '0')} / ${String(n).padStart(2, '0')}`, about: DATA.location }[route] || '';
+  pb.querySelectorAll('[data-i]').forEach(el => el.classList.toggle('sel', +el.dataset.i === sel));
+  if (route === 'stack') { updateGame(); if (scroll) centerGame(); return; }
+  if (scroll) pb.querySelector('.sel')?.scrollIntoView({ block: 'nearest', behavior: reduced ? 'auto' : 'smooth' });
+}
+pb.addEventListener('click', e => {
+  const step = e.target.closest('[data-step]'), dot = e.target.closest('[data-game]');
+  if (step) return move(+step.dataset.step);
+  if (dot) { sel = +dot.dataset.game; markSel(); return; }
+  const c = e.target.closest('[data-i]');
+  if (c && !e.target.closest('a')) { sel = +c.dataset.i; markSel(); }
+});
+pb.addEventListener('mouseover', e => { const c = e.target.closest('a.card[data-i]'); if (c && +c.dataset.i !== sel) { sel = +c.dataset.i; markSel(false); } });
+
+// ---------- routing (#projects etc. are shareable links) ----------
+function showView() { document.body.classList.add('open'); panel.focus({ preventScroll: true }); }
+function showHome() { document.body.classList.remove('zoom'); navBtns[hl].focus({ preventScroll: true }); }
+function go(next) {
+  if (next === route) return;
+  const prev = route;
+  route = next; sel = 0;
+  if (next !== 'home') document.body.classList.add('zoom'); // hides the sidebar; it comes back near the end of the zoom out
+  else if (!has3d || reduced) showHome();
+  if (next === 'home') document.body.classList.remove('open');
+  else renderPanel();
+  if (prev !== 'home' && next !== 'home') return; // section → section: already full screen
+  if (has3d && !reduced) zoomTo(next); // zoom into the screen (view appears when it lands) or back out
+  else { scr.state = 'saver'; if (next !== 'home') showView(); }
+}
+const fromHash = () => SECTIONS.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'home';
+addEventListener('hashchange', () => go(fromHash()));
+$('#back').onclick = () => pressB();
+
+// ---------- controls: D-pad / A / B, mirrored on the keyboard ----------
+function move(d) {
+  if (route === 'home') return setHl((hl + d + SECTIONS.length) % SECTIONS.length, true);
+  const n = list(route).length;
+  if (n) {
+    sel = (sel + d + n) % n; markSel();
+    if (route === 'stack' && document.activeElement.matches('.game-case')) pb.querySelector('.game-case.sel').focus({ preventScroll: true });
+  }
+}
+const openUrl = u => u && (u.startsWith('mailto:') ? location.href = u : window.open(u, '_blank', 'noopener'));
+function pressA() {
+  if (route === 'home') location.hash = SECTIONS[hl];
+  else if (route === 'projects') openUrl(DATA.projects[sel].link || DATA.projects[sel].repo);
+  else if (route === 'contact') openUrl(DATA.links[sel].url);
+}
+function pressB() { if (route !== 'home') location.hash = ''; }
+const DIRS = { ArrowUp: [0, 1], ArrowDown: [0, -1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] };
+addEventListener('keydown', e => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key;
+  if (DIRS[k]) { e.preventDefault(); fx('dpad', DIRS[k]); move(k === 'ArrowUp' || k === 'ArrowLeft' ? -1 : 1); }
+  else if ((k === 'Enter' || k === ' ') && !e.target.closest('a,button')) { e.preventDefault(); fx('a'); pressA(); }
+  else if (k === 'Escape' || k === 'Backspace') { fx('b'); pressB(); }
+});
+
+// ---------- the orange's screen glass (2D canvas → texture over the 3D void): CRT overlay, fading to a flat screen as a zoom in lands ----------
+const SW = 768, SH = 600, cv = document.createElement('canvas');
+cv.width = SW; cv.height = SH;
+const g = cv.getContext('2d');
+const BG = '#173a6a';
+const vignette = g.createRadialGradient(SW / 2, SH / 2, SH * .35, SW / 2, SH / 2, SW * .75);
+vignette.addColorStop(0, 'rgba(0,0,0,0)'); vignette.addColorStop(1, 'rgba(0,0,0,.5)');
+const sheen = g.createLinearGradient(0, 0, SW * .6, SH);
+sheen.addColorStop(0, 'rgba(255,255,255,.08)'); sheen.addColorStop(.5, 'rgba(255,255,255,0)');
+function drawScreen() {
+  g.clearRect(0, 0, SW, SH);
+  let crt = 1; // strength of scanlines / vignette, faded out so the zoomed-in screen matches the flat page
+  if (scr.state === 'in') { crt = 1 - ramp(.9, .99, scr.p); g.globalAlpha = 1 - crt; g.fillStyle = BG; g.fillRect(0, 0, SW, SH); } // dive into the black first, then the page
+  else if (scr.state === 'out') { crt = ramp(.15, .7, scr.p); g.globalAlpha = 1 - crt; g.fillStyle = BG; g.fillRect(0, 0, SW, SH); }
+  g.globalAlpha = crt;
+  g.fillStyle = 'rgba(0,0,0,.16)';
+  for (let y = 0; y < SH; y += 4) g.fillRect(0, y, SW, 2);
+  g.fillStyle = vignette; g.fillRect(0, 0, SW, SH);
+  g.fillStyle = sheen; g.fillRect(0, 0, SW, SH);
+  g.globalAlpha = 1;
+}
+
+// ---------- 3D orange handheld ----------
+async function init3d() {
+  const [THREE, { mergeVertices }, { frameCorners }] = await Promise.all([import('three'), import('three/addons/utils/BufferGeometryUtils.js'), import('three/addons/utils/CameraUtils.js')]);
+  const canvas = $('#gl');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; // only the void's city casts any
+  const scene = new THREE.Scene();
+  const CAM_Z = 9, camera = new THREE.PerspectiveCamera(30, 1, .1, 100);
+  camera.position.z = CAM_Z;
+  scene.add(new THREE.HemisphereLight(0xe4f3ff, 0x9a8448, 1.8));
+  const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(3, 4, 6); scene.add(key);
+  const rim = new THREE.DirectionalLight(0xbfe6ff, 1.5); rim.position.set(-5, 2, -4); scene.add(rim);
+
+  const device = new THREE.Group(); scene.add(device);
+  const V3 = (x, y, z) => new THREE.Vector3(x, y, z);
+  const mat = (color, roughness = .4) => new THREE.MeshStandardMaterial({ color, roughness });
+  const mesh = (geo, material, x = 0, y = 0, z = 0) => { const m = new THREE.Mesh(geo, material); m.position.set(x, y, z); device.add(m); return m; };
+  const smooth = geo => { geo.deleteAttribute('normal'); geo.deleteAttribute('uv'); geo = mergeVertices(geo, 1e-4); geo.computeVertexNormals(); return geo; };
+  const extrude = (shape, depth, bevel) => smooth(new THREE.ExtrudeGeometry(shape, { depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel, bevelSegments: 6, curveSegments: 32 }));
+  const rrect = (w, h, r) => {
+    const s = new THREE.Shape(), x = -w / 2, y = -h / 2;
+    s.moveTo(x + r, y); s.lineTo(x + w - r, y); s.quadraticCurveTo(x + w, y, x + w, y + r);
+    s.lineTo(x + w, y + h - r); s.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    s.lineTo(x + r, y + h); s.quadraticCurveTo(x, y + h, x, y + h - r);
+    s.lineTo(x, y + r); s.quadraticCurveTo(x, y, x + r, y);
+    return s;
+  };
+
+  // body: near-sphere + stem dimple, sliced flat at z = FACE so the screen and buttons sit on a flat plate
+  const FACE = .7;
+  const lemonGeo = new THREE.SphereGeometry(1, 128, 96);
+  lemonGeo.rotateY(-Math.PI / 2); // UV seam to the back
+  const pos = lemonGeo.attributes.position, v = new THREE.Vector3(), clamp = THREE.MathUtils.clamp;
+  const smin = (a, b, k) => { const h = clamp(.5 + .5 * (b - a) / k, 0, 1); return b + (a - b) * h - k * h * (1 - h); };
+  for (let i = 0; i < pos.count; i++) {
+    v.fromBufferAttribute(pos, i);
+    const top = Math.acos(clamp(v.y, -1, 1));
+    const r = 1 - .05 * Math.exp(-top * top / .02) + .015 * Math.sin(v.x * 7 + 1) * Math.sin(v.y * 5) * Math.sin(v.z * 6 + 2);
+    pos.setXYZ(i, v.x * 1.48 * r, v.y * 1.45 * r, smin(v.z * 1.48 * r, FACE, .15));
+  }
+  lemonGeo.computeVertexNormals();
+  const peel = document.createElement('canvas'); peel.width = 1024; peel.height = 512; // pores for the bump map
+  const pg = peel.getContext('2d'); pg.fillStyle = '#888'; pg.fillRect(0, 0, 1024, 512);
+  for (let i = 0; i < 16000; i++) { pg.fillStyle = `rgba(30,30,30,${.15 + Math.random() * .35})`; pg.beginPath(); pg.arc(Math.random() * 1024, Math.random() * 512, .6 + Math.random() * 2, 0, TAU); pg.fill(); }
+  const peelTex = new THREE.CanvasTexture(peel); peelTex.wrapS = THREE.RepeatWrapping;
+  const body = mesh(lemonGeo, new THREE.MeshStandardMaterial({ color: 0xff8418, roughness: .5, bumpMap: peelTex, bumpScale: 2.5 }));
+
+  // stem + leaf
+  const green = mat(0x2f7a32, .6);
+  mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([V3(0, 1.3, 0), V3(.02, 1.62, 0), V3(.16, 1.92, -.04), V3(.4, 2.08, -.08)]), 32, .05, 12), green);
+  mesh(new THREE.SphereGeometry(.05, 12, 8), green, .4, 2.08, -.08);
+  const leafShape = new THREE.Shape();
+  leafShape.moveTo(0, 0); leafShape.quadraticCurveTo(.4, .34, 1, 0); leafShape.quadraticCurveTo(.4, -.34, 0, 0);
+  mesh(extrude(leafShape, .01, .025), mat(0x3f9a35, .5), .06, 1.74, -.02).rotation.set(-.35, -.25, .5);
+
+  // screen
+  const cyan = mat(0x40d6f0, .35), blue = mat(0x1f83f2, .3), SCR_Y = .32, FRONT = FACE + .12;
+  mesh(extrude(rrect(1.56, 1.26, .2), .09, .045), cyan, 0, SCR_Y, FACE - .06 + .045); // back sunk into the curved edge
+  mesh(new THREE.ShapeGeometry(rrect(1.46, 1.16, .12), 24), new THREE.MeshBasicMaterial({ color: 0x0f2a52 }), 0, SCR_Y, FRONT + .002);
+  const sg = new THREE.ShapeGeometry(rrect(1.38, 1.08, .08), 24), uv = sg.attributes.uv, sp = sg.attributes.position;
+  for (let i = 0; i < uv.count; i++) uv.setXY(i, sp.getX(i) / 1.38 + .5, sp.getY(i) / 1.08 + .5);
+  const tex = new THREE.CanvasTexture(cv);
+  Object.assign(tex, { colorSpace: THREE.SRGBColorSpace, generateMipmaps: false, minFilter: THREE.LinearFilter, anisotropy: renderer.capabilities.getMaxAnisotropy() });
+  const rt = new THREE.WebGLRenderTarget(1024, 800, { samples: 4 });
+  const screen = mesh(sg, new THREE.MeshBasicMaterial({ map: rt.texture }), 0, SCR_Y, FRONT + .004);
+  mesh(sg, new THREE.MeshBasicMaterial({ map: tex, transparent: true }), 0, SCR_Y, FRONT + .006); // glass: scanlines, loader
+
+  // the void inside the orange (PS2 boot): its own scene, in the screen's local units (screen = 1.38 x 1.08 at z 0, void behind it), rendered
+  // each frame from the viewer's eye through the screen as a window (off-axis frustum), so it parallaxes like a space far bigger than the orange
+  const room = new THREE.Scene(), roomCam = new THREE.PerspectiveCamera(50, 1, .05, 100), eye = new THREE.Vector3();
+  const corners = [V3(-.69, -.54, 0), V3(.69, -.54, 0), V3(-.69, .54, 0)];
+  room.background = new THREE.Color(0); room.fog = new THREE.FogExp2(0, .03); // black fades everything out into the abyss: tower bases dim, tops bright
+  const glow = { transparent: true, depthWrite: false, blending: THREE.AdditiveBlending };
+  const canvasTex = draw => { const c = document.createElement('canvas'); c.width = c.height = 64; draw(c.getContext('2d')); return new THREE.CanvasTexture(c); };
+  const rand = (a, b) => a + Math.random() * (b - a);
+
+  // monoliths, seen from above: the floor faces the screen (tipped back a little so the far side is the top of the screen) and the
+  // towers reach up toward the viewer. Solid pale blocks in a disc, heights one radial gradient (tallest at the centre), slowly breathing
+  const VOID_Z = 14, tilt = new THREE.Group(); tilt.rotation.x = Math.PI / 2 - .3; room.add(tilt);
+  const paneTex = canvasTex(g2 => { g2.fillStyle = '#c9d6e6'; g2.fillRect(0, 0, 64, 64); g2.strokeStyle = '#fff'; g2.lineWidth = 6; g2.strokeRect(3, 3, 58, 58); });
+  room.add(new THREE.HemisphereLight(0xffffff, 0x1a2a40, 1.6));
+  // key light low from the upper left, so towers throw long shadows across their neighbours
+  const voidKey = new THREE.DirectionalLight(0xffffff, 3.2); room.add(voidKey, voidKey.target); // placed beside the city each frame
+  voidKey.castShadow = true; voidKey.shadow.mapSize.set(2048, 2048); voidKey.shadow.normalBias = .02;
+  Object.assign(voidKey.shadow.camera, { left: -3, right: 3, top: 3, bottom: -3, near: .1, far: 15 });
+  const city = new THREE.Group(); city.scale.setScalar(.56); tilt.add(city); // scaled so the whole disc fits the screen at VOID_Z
+  const spots = [];
+  const CELL = .42, N = 8, R = 3.4;
+  for (let i = -N; i < N; i++) for (let j = -N; j < N; j++) { // half-cell offset: the centre is a corner between four towers, the shaft the dive falls down
+    const x = (i + .5) * CELL, z = (j + .5) * CELL, r = Math.hypot(x, z);
+    if (r > R || Math.random() < .3) continue;
+    spots.push({ x, z, w: rand(.28, .36), d: rand(.28, .36), h: (.6 + 2.6 * Math.exp(-r * r / 2.5)) * rand(.85, 1.15), ph: rand(0, TAU), core: r < CELL });
+  }
+  const wallMat = new THREE.MeshLambertMaterial({ map: paneTex, emissive: 0x2a3442 }), roofMat = wallMat.clone();
+  roofMat.color.set(0xa7b0bc); // roofs a shade darker than the walls
+  const towers = new THREE.InstancedMesh(new THREE.BoxGeometry(1, 1, 1).translate(0, .5, 0), [wallMat, wallMat, roofMat, wallMat, wallMat, wallMat], spots.length); // box face order: +x -x +y(roof) -y +z -z
+  towers.castShadow = towers.receiveShadow = true;
+  city.add(towers);
+
+  // cosmic fog: big soft blue/green blobs rolling across the floor, mostly over its near (lower) half
+  const mistTex = canvasTex(g2 => { const r = g2.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, '#fff'); r.addColorStop(1, 'rgba(255,255,255,0)'); g2.fillStyle = r; g2.fillRect(0, 0, 64, 64); });
+  const mist = Array.from({ length: 18 }, (_, i) => {
+    const m = new THREE.Sprite(new THREE.SpriteMaterial({ map: mistTex, color: i % 2 ? 0x1f6bff : 0x19e0a0, opacity: .45, ...glow }));
+    m.scale.set(rand(2.5, 4), rand(.8, 1.4), 1); m.position.set(rand(-5, 5), rand(.05, .3), rand(-1, 4)); m.userData.v = rand(.06, .18);
+    tilt.add(m); return m;
+  });
+
+  // stardust: tiny glowing squares between the towers and the glass, drifting up and across the screen
+  const DUST = 280, dp = new Float32Array(DUST * 3);
+  for (let i = 0; i < DUST; i++) dp.set([rand(-2, 2), rand(-1.5, 1.5), rand(-.5, -5)], i * 3);
+  const dustGeo = new THREE.BufferGeometry().setAttribute('position', new THREE.BufferAttribute(dp, 3));
+  room.add(new THREE.Points(dustGeo, new THREE.PointsMaterial({ size: .03, color: 0xffffff, ...glow })));
+
+  // wisps: four coloured lights gliding round the skyline (city units, so they turn with it), each dragging a faint glowing trail.
+  // A section press swirls them together over the centre shaft into one white light, which drops down it ahead of the camera's dive
+  const TRAIL = 180, WHITE = new THREE.Color(1, 1, 1), trailMat = new THREE.PointsMaterial({ map: mistTex, vertexColors: true, ...glow }), roof = r => .6 + 2.6 * Math.exp(-r * r / 2.5);
+  const wisps = [0x3ddc84, 0xff4d6d, 0x4d8bff, 0xff7ad9].map((c, i) => {
+    const head = new THREE.Sprite(new THREE.SpriteMaterial({ map: mistTex, color: c, ...glow }));
+    head.scale.setScalar(.45);
+    head.add(new THREE.Sprite(new THREE.SpriteMaterial({ map: mistTex, color: 0xffffff, opacity: .8, ...glow }))).children[0].scale.setScalar(.3);
+    const tp = new Float32Array(TRAIL * 3), tc = new Float32Array(TRAIL * 3), col = new THREE.Color();
+    for (let j = 0; j < TRAIL; j++) col.set(c).multiplyScalar(.035 * (1 - j / TRAIL) ** 1.5).toArray(tc, j * 3); // additive and heavily overlapping, so dim per point; darker = fainter
+    const trail = new THREE.BufferGeometry().setAttribute('position', new THREE.BufferAttribute(tp, 3)).setAttribute('color', new THREE.BufferAttribute(tc, 3));
+    const pts = new THREE.Points(trail, trailMat);
+    pts.frustumCulled = false; city.add(head, pts);
+    return { head, c: new THREE.Color(c), tp, trail, dir: i % 2 ? 1 : -1, w: rand(.25, .4), f: [rand(.15, .3), rand(.1, .25), rand(.2, .4)], ph: [0, 1, 2, 3].map(() => rand(0, TAU)) };
+  });
+
+  const dummy = new THREE.Object3D(), tcol = new THREE.Color();
+  function animateVoid(t, dt) {
+    const drop = scr.state === 'in' ? scr.p : 0, open = 1 - ramp(.05, .45, drop); // the four centre towers sink to open the shaft
+    spots.forEach((o, i) => {
+      dummy.position.set(o.x, 0, o.z); dummy.scale.set(o.w, Math.max(1e-3, o.h * (1 + .12 * Math.sin(t * .4 + o.ph)) * (o.core ? open : 1)), o.d); dummy.updateMatrix();
+      towers.setMatrixAt(i, dummy.matrix); towers.setColorAt(i, tcol.setScalar(.8 + .2 * Math.sin(t * .7 + o.ph * 2)));
+    });
+    towers.instanceMatrix.needsUpdate = towers.instanceColor.needsUpdate = true;
+    city.rotation.y = t * .03; // the skyline slowly turns beneath you
+    for (const m of mist) if ((m.position.x += m.userData.v * dt) > 5) m.position.x = -5;
+    for (let i = 0; i < DUST; i++) {
+      if ((dp[i * 3 + 1] += dt * (.04 + i % 5 * .03)) > 1.5) dp[i * 3 + 1] = -1.5;
+      if ((dp[i * 3] += dt * .03) > 2) dp[i * 3] = -2;
+    }
+    dustGeo.attributes.position.needsUpdate = true;
+    wisps.forEach((w, i) => {
+      const p = w.head.position;
+      const m = w.head.material;
+      if (drop) { // swirl in over the shaft (faster as the ring tightens), merge into one white light once the zoom lands, then fall
+        const f = w.from ??= p.clone(), h = ramp(0, .35, drop), merge = ramp(.5, .72, drop), q = clamp((drop - .62) / .3, 0, 1) ** 2;
+        const a = i * TAU / 4 + 14 * drop * drop, r = .7 * (1 - merge), y = 3.6 + (-20 - 3.6) * q;
+        p.set(f.x + (r * Math.cos(a) - f.x) * h, f.y + (y - f.y) * h, f.z + (r * Math.sin(a) - f.z) * h);
+        m.color.lerpColors(w.c, WHITE, merge); m.opacity = 1 - .6 * merge; w.head.scale.setScalar(.45 * (1 + .6 * merge)); // four overlapping = one bigger light
+      } else { // orbit with a wandering radius, skimming the rooftops (sometimes dipping between them)
+        const a = w.dir * w.w * t + w.ph[0] + .5 * Math.sin(t * w.f[0] + w.ph[1]), r = 1.3 + 1.1 * Math.sin(t * w.f[1] + w.ph[2]);
+        p.set(r * Math.cos(a), roof(r) * (.8 + .3 * (1 + Math.sin(t * w.f[2] + w.ph[3]))), r * Math.sin(a));
+        if (w.from !== null) { // first frame / back from a drop: restore the wisp, restart its trail here
+          w.from = null; m.color.copy(w.c); m.opacity = 1; w.head.scale.setScalar(.45);
+          for (let j = 0; j < TRAIL; j++) p.toArray(w.tp, j * 3);
+        }
+      }
+      w.tp.copyWithin(3, 0, (TRAIL - 1) * 3); p.toArray(w.tp, 0);
+      w.trail.attributes.position.needsUpdate = true;
+    });
+  }
+  animateVoid(0, 0);
+
+  // D-pad + A/B: stand .15 proud of the flat face (press travel is .045), each seated in a darker recess
+  const cross = (a, l) => { const c = new THREE.Shape(); [[-a, l], [a, l], [a, a], [l, a], [l, -a], [a, -a], [a, -l], [-a, -l], [-a, -a], [-l, -a], [-l, a], [-a, a]].forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); return c; };
+  const disc = r => new THREE.Shape().absarc(0, 0, r, 0, TAU);
+  const well = mat(0xc4560a, .7), BTN_Z = FACE - .02 + .04; // geometry back sits .02 under the face
+  const pad = (shape, wellShape, x, y) => { mesh(new THREE.ShapeGeometry(wellShape, 32), well, x, y, FACE + .002); return mesh(extrude(shape, .07, .04), blue, x, y, BTN_Z); };
+  const dpad = pad(cross(.08, .24), cross(.15, .31), -.52, -.78);
+  const btnA = pad(disc(.14), disc(.21), .58, -.68);
+  const btnB = pad(disc(.115), disc(.185), .27, -.94);
+  const pads = { dpad, a: btnA, b: btnB };
+  for (const b of Object.values(pads)) b.userData = { z: b.position.z, p: 0, dir: [0, 0] };
+  fx = (name, dir = [0, 0]) => Object.assign(pads[name].userData, { p: 1, dir });
+
+  // layout: home = whole orange fitted beside the nav; cover = its screen filling the viewport ("full screen")
+  const L = {}, cur = {}, DEVICE = { cx: 0, cy: .32, w: 3.1, h: 3.7 }, ZOOM = .75; // ZOOM: share of the viewport the zoomed-in screen fills (desktop)
+  let homeYaw = 0;
+  function fit(r, box, frac) {
+    const hs = 2 * CAM_Z * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), ws = hs * camera.aspect, px = ws / innerWidth;
+    const s = Math.max(.1, Math.min((r.r - r.l) * px * frac / box.w, (r.b - r.t) * px * frac / box.h));
+    return { s, x: ((r.l + r.r) / 2 / innerWidth - .5) * ws - box.cx * s, y: (.5 - (r.t + r.b) / 2 / innerHeight) * hs - box.cy * s };
+  }
+  function layout() {
+    const w = innerWidth, h = innerHeight, mobile = matchMedia('(max-width: 760px)').matches;
+    renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+    homeYaw = mobile ? 0 : -.35; // desktop: face angled toward the nav
+    const nav = $('nav').getBoundingClientRect(), brand = $('.brand').getBoundingClientRect();
+    L.home = mobile ? fit({ l: 0, r: w, t: brand.bottom + 8, b: nav.top - 8 }, DEVICE, .92)
+                    : fit({ l: nav.right + 30, r: w - 20, t: 20, b: h - 70 }, DEVICE, .9);
+    // scale where the screen (at z = FRONT * s, so nearer the camera as it grows) spans F of the view. Mobile: covers it (+8% hides
+    // its rounded corners); desktop: fits inside it, so the orange and sky stay visible round the edges, and #panel matches the screen
+    const tn = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), A = w / h, F = mobile ? 1 : ZOOM;
+    const sh = 2 * tn * F * CAM_Z / (1.08 + 2 * tn * F * FRONT), sw = 2 * tn * F * CAM_Z * A / (1.38 + 2 * tn * F * FRONT * A);
+    const s = mobile ? 1.08 * Math.max(sh, sw) : Math.min(sh, sw);
+    L.cover = { s, x: 0, y: -SCR_Y * s };
+    const px = 1.08 * s / (2 * tn * (CAM_Z - FRONT * s)) * h; // screen height on the page
+    panel.style.cssText = mobile ? '' : `--pw:${px * 1.38 / 1.08}px;--ph:${px}px;--pr:${px * .08 / 1.08}px`;
+  }
+
+  // pointer: drag the orange to orbit the camera around it; click the D-pad / buttons / screen
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2(), hitables = [body, screen, dpad, btnA, btnB];
+  const orbit = { yaw: 0, pitch: 0 }, q = new THREE.Quaternion(), eul = new THREE.Euler(0, 0, 0, 'YXZ');
+  let drag = null, tw = null; // tw = running zoom tween
+  const hit = e => { ndc.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); ray.setFromCamera(ndc, camera); return ray.intersectObjects(hitables, false)[0]; };
+  canvas.addEventListener('pointermove', e => {
+    if (drag) {
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (!drag.moved && Math.hypot(dx, dy) < 4) return; // still a click
+      Object.assign(drag, { moved: true, x: e.clientX, y: e.clientY });
+      orbit.yaw += dx * .008; orbit.pitch = clamp(orbit.pitch + dy * .008, -1.2, 1.2);
+      return;
+    }
+    const o = route === 'home' && !tw && hit(e)?.object;
+    canvas.style.cursor = !o ? '' : o === body ? 'grab' : 'pointer';
+  });
+  const endDrag = click => {
+    if (click && drag && !drag.moved && drag.screen && route === 'home') pressA();
+    drag = null; canvas.style.cursor = '';
+  };
+  canvas.addEventListener('pointerup', () => endDrag(true));
+  canvas.addEventListener('pointercancel', () => endDrag(false));
+  canvas.addEventListener('pointerdown', e => {
+    const o = e.button === 0 && route === 'home' && !tw && hit(e)?.object;
+    if (!o) return;
+    if (o === dpad) {
+      const p = dpad.worldToLocal(hit(e).point), horiz = Math.abs(p.x) > Math.abs(p.y);
+      fx('dpad', horiz ? [Math.sign(p.x), 0] : [0, Math.sign(p.y)]);
+      move(horiz ? Math.sign(p.x) : -Math.sign(p.y));
+    } else if (o === btnA) { fx('a'); pressA(); }
+    else if (o === btnB) { fx('b'); pressB(); }
+    else { drag = { x: e.clientX, y: e.clientY, moved: false, screen: o === screen }; canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; }
+  });
+
+  // zoom: tween position, scale and camera orbit together; zooming in ends with the screen filling the viewport
+  const ease = p => p < .5 ? 4 * p ** 3 : 1 - (-2 * p + 2) ** 3 / 2;
+  zoomTo = next => {
+    const into = next !== 'home';
+    drag = null;
+    tw = { into, t0: now(), dur: into ? 2.6 : 1.1, from: { ...cur, yaw: Math.atan2(Math.sin(orbit.yaw), Math.cos(orbit.yaw)), pitch: orbit.pitch } };
+    Object.assign(scr, { state: into ? 'in' : 'out', p: 0 });
+  };
+
+  let last = now(), bob = 0, spin = 0, spinT0 = -1, restYaw = 0;
+  function frame() {
+    const t = now(), dt = Math.min(t - last, .05), k = 1 - Math.exp(-dt * 4.5);
+    last = t;
+    if (spinT0 >= 0) { const p = clamp((t - spinT0) / .9, 0, 1); spin = -TAU * (1 - ease(p)); if (p === 1) spinT0 = -1; } // intro spin
+    const T = route === 'home' ? L.home : L.cover;
+    restYaw = route === 'home' ? homeYaw : 0; // the orbit without any drag: where the void's city is anchored
+    if (tw) {
+      const p = clamp((t - tw.t0) / tw.dur, 0, 1), e = ease(tw.into ? Math.min(1, p / .6) : p), f = tw.from, yaw = tw.into ? 0 : homeYaw;
+      restYaw = yaw - (yaw - (tw.into ? homeYaw : 0)) * (1 - e);
+      for (const key of ['x', 'y', 's']) cur[key] = f[key] + (T[key] - f[key]) * e;
+      orbit.yaw = f.yaw + (yaw - f.yaw) * e; orbit.pitch = f.pitch * (1 - e);
+      scr.p = p;
+      if (!tw.into && p > .6 && document.body.classList.contains('zoom')) showHome();
+      if (p === 1) { if (tw.into) showView(); else scr.state = 'saver'; tw = null; }
+    } else for (const key of ['x', 'y', 's']) cur[key] += (T[key] - cur[key]) * k; // follows resizes
+    bob += ((route === 'home' && !tw && !reduced ? 1 : 0) - bob) * k;
+    device.position.set(cur.x, cur.y + Math.sin(t * 1.4) * .05 * cur.s * bob, 0);
+    device.scale.setScalar(cur.s);
+    device.rotation.set(0, spin, 0);
+    // orbit the whole camera rig around the orange, so it stays put on the page while the view turns
+    q.setFromEuler(eul.set(-orbit.pitch, -orbit.yaw, 0));
+    camera.position.set(0, 0, CAM_Z).sub(device.position).applyQuaternion(q).add(device.position);
+    camera.quaternion.copy(q);
+    for (const b of Object.values(pads)) {
+      const u = b.userData; u.p = Math.max(0, u.p - dt * 6);
+      b.position.z = u.z - u.p * .045;
+      if (b === dpad) b.rotation.set(-u.dir[1] * u.p * .18, u.dir[0] * u.p * .18, 0);
+    }
+    drawScreen(); tex.needsUpdate = true;
+    if (!reduced) animateVoid(t, dt);
+    scene.updateMatrixWorld();
+    // city deep in the void, on the line through the screen centre from where the eye rests (not where it is), so it sits centred
+    // but dragging the orange swings the window off it, like looking past a window frame
+    q.setFromEuler(eul.set(0, -restYaw, 0));
+    screen.worldToLocal(eye.set(0, 0, CAM_Z).sub(device.position).applyQuaternion(q).add(device.position));
+    // zooming in: dive down the line into the city, pitching to look straight down its centre shaft, past the floor into the black
+    const zin = scr.state === 'in' ? scr.p : 0, dive = clamp((zin - .15) / .75, 0, 1) ** 3;
+    tilt.rotation.x = Math.PI / 2 - .3 * (1 - ramp(.1, .6, zin));
+    tilt.position.copy(eye).multiplyScalar(-(VOID_Z - (VOID_Z + eye.z + 1.5) * dive) / eye.z);
+    roomCam.position.copy(screen.worldToLocal(eye.copy(camera.position)));
+    voidKey.target.position.copy(tilt.position); voidKey.position.copy(tilt.position).add(V3(-4, 2, 3));
+    frameCorners(roomCam, ...corners);
+    // three sizes points off the canvas height, not the render target's: rescale so each trail dot is .28 void units wide
+    trailMat.size = .28 * rt.height * roomCam.projectionMatrix.elements[5] / (renderer.getPixelRatio() * innerHeight);
+    renderer.setRenderTarget(rt); renderer.render(room, roomCam); renderer.setRenderTarget(null);
+    renderer.render(scene, camera);
+    requestAnimationFrame(frame);
+  }
+
+  await Promise.race([document.fonts.load('40px VT323'), new Promise(r => setTimeout(r, 1500))]);
+  layout();
+  document.fonts.ready.then(layout);
+  addEventListener('resize', layout);
+  if (route === 'home') {
+    orbit.yaw = homeYaw;
+    Object.assign(cur, L.home, reduced ? {} : { y: L.home.y - 5 }); // intro: rise up from below with a spin
+    if (!reduced) { spin = -TAU; spinT0 = now() + .4; }
+  } else { Object.assign(cur, L.cover); Object.assign(scr, { state: 'in', p: 1 }); } // deep link: start zoomed in
+  has3d = true;
+  frame();
+}
+
+go(fromHash());
+try { await init3d(); } catch (err) { console.warn('3D disabled:', err); document.body.classList.add('no3d'); }
+document.body.classList.add('ready');
+</script>
+</body>
+</html>
